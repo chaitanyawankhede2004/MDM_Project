@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block title %}Dashboard - EduPredict{% endblock %}
+
+{% block content %}
+
+<div class="dash-header" style="margin-top: 2rem;">
+    <div>
+        <h1>Dashboard Overview</h1>
+        <p>Analyze your current admission statistics, {{ name }}!</p>
+    </div>
+    <a href="/predict" class="btn-cta">
+        <i class="fas fa-magic"></i> Formulate Predictions
+    </a>
+</div>
+
+<div class="grid-3">
+    <div class="glass-card stat-card" style="padding: 1.5rem; animation-delay: 0.1s;">
+        <div class="stat-title"><i class="fas fa-hashtag"></i> Evaluated Rank</div>
+        <div class="stat-value highlight">{{ rank }}</div>
+        <div style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.5rem;">Registered candidate constraint</div>
+    </div>
+    
+    <div class="glass-card stat-card" style="padding: 1.5rem; animation-delay: 0.2s;">
+        <div class="stat-title"><i class="fas fa-shield-alt"></i> Authentication</div>
+        <div class="stat-value ok"><i class="fas fa-check-circle"></i> Secure</div>
+        <div style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.5rem;">Database query validated</div>
+    </div>
+    
+    <div class="glass-card stat-card" style="padding: 1.5rem; animation-delay: 0.3s;">
+        <div class="stat-title"><i class="fas fa-satellite-dish"></i> Status</div>
+        <div class="stat-value ok" style="color: #60a5fa;"><i class="fas fa-signal"></i> Active</div>
+        <div style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.5rem;">Prediction engine ready</div>
+    </div>
+</div>
+
+<div class="glass-card" style="text-align: center; padding: 4rem 2rem; margin-top: 2rem; border-style: dashed;">
+    <i class="fas fa-search" style="font-size: 4rem; opacity: 0.2; margin-bottom: 1rem; color: var(--accent-color);"></i>
+    <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Explore the Institute Database</h3>
+    <p style="color: var(--text-secondary); max-width: 500px; margin: 0 auto; line-height: 1.6; margin-bottom: 1rem;">
+        Discover specific colleges and courses manually using our high-speed directory.
+    </p>
+    <a href="/search" class="btn-outline" style="display: inline-block; margin-top: 1.5rem; padding: 0.8rem 2rem;">Go to Search</a>
+</div>
+
+{% endblock %}

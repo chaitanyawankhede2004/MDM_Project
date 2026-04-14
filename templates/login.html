@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}Login - EduPredict{% endblock %}
+
+{% block content %}
+
+<div class="glass-card" style="max-width: 450px; margin: 4rem auto;">
+    <div style="text-align: center; margin-bottom: 2.5rem;">
+        <h2 style="font-size: 2rem; margin-bottom: 0.5rem;"><i class="fas fa-sign-in-alt" style="color: var(--accent-color);"></i> Welcome Back</h2>
+        <p style="color: var(--text-secondary);">Enter your credentials to access your dashboard</p>
+    </div>
+
+    <form method="post">
+        <div class="form-group">
+            <label><i class="fas fa-id-card" style="opacity: 0.6; margin-right: 5px;"></i> Enrollment Number</label>
+            <input type="text" name="enr" required class="form-control" placeholder="e.g. 21000123">
+        </div>
+        
+        <div class="form-group">
+            <label><i class="fas fa-lock" style="opacity: 0.6; margin-right: 5px;"></i> Password</label>
+            <input type="password" name="password" required class="form-control" placeholder="••••••••">
+        </div>
+        
+        <button type="submit" class="btn-primary">Secure Login <i class="fas fa-lock" style="font-size: 0.8em; margin-left: 5px;"></i></button>
+    </form>
+    
+    <div class="auth-link">
+        Don't have an account? <a href="/register">Register here</a>
+    </div>
+</div>
+
+{% endblock %}
